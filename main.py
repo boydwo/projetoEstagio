@@ -44,9 +44,11 @@ data = verificaDiaData(data)
 precoMeuCanino = meuCaninoFeliz(data, quantCaesPeq, quantCaesGrand)
 precoVaiRex = vaiRex(data, quantCaesPeq, quantCaesGrand)
 precoChowChawgas = chowChawgas(quantCaesPeq, quantCaesGrand)
-print(precoMeuCanino)
-print(precoVaiRex)
-print(precoChowChawgas)
+
+#print(precoMeuCanino)
+#print(precoVaiRex)
+#print(precoChowChawgas)
+
 if (precoMeuCanino < precoVaiRex) and (precoMeuCanino < precoChowChawgas):
     print("Melhor Petshop: Meu  Canino Feliz")
     print("Preço total : %.2f"%precoMeuCanino)

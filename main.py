@@ -37,6 +37,21 @@ def calculaValorChowChawgas(caesPequenos, caesGrandes):
     return valorTotal
 
 
+def imprimeValorMeuCaninoFeliz(preco):
+    print("Melhor Petshop: Meu  Canino Feliz")
+    print("Preço total : %.2f reais\n" % preco)
+
+
+def imprimeValorVaiRex(preco):
+    print("Melhor Petshop: Vai Rex")
+    print("Preço total : %.2f reais\n" % preco)
+
+
+def imprimeValorChowChawgas(preco):
+    print("Melhor Petshop: ChowChawgas")
+    print("Preço total : %.2f reais\n" % preco)
+
+
 entrada = str(input())
 dados = entrada.split(" ")
 
@@ -45,6 +60,7 @@ quantCaesPeq = int(dados[1])
 quantCaesGrand = int(dados[2])
 
 data = verificaDiaData(data)
+
 precoMeuCanino = calculaValorMeuCaninoFeliz(data, quantCaesPeq, quantCaesGrand)
 precoVaiRex = calculaValorVaiRex(data, quantCaesPeq, quantCaesGrand)
 precoChowChawgas = calculaValorChowChawgas(quantCaesPeq, quantCaesGrand)
@@ -53,14 +69,20 @@ print(precoMeuCanino)
 print(precoVaiRex)
 print(precoChowChawgas)
 
-if (precoMeuCanino <= precoVaiRex) and (precoMeuCanino <= precoChowChawgas):
-    print("Melhor Petshop: Meu  Canino Feliz")
-    print("Preço total : %.2f reais\n" % precoMeuCanino)
+if (precoMeuCanino == precoVaiRex):
+    imprimeValorVaiRex(precoVaiRex)
 
-if (precoVaiRex <= precoMeuCanino) and (precoVaiRex <= precoChowChawgas):
-    print("Melhor Petshop: Vai Rex")
-    print("Preço total : %.2f reais\n" % precoVaiRex)
+elif (precoMeuCanino == precoChowChawgas):
+    imprimeValorChowChawgas(precoChowChawgas)
 
-if(precoChowChawgas <= precoMeuCanino) and (precoChowChawgas <= precoVaiRex):
-    print("Melhor Petshop: ChowChawgas")
-    print("Preço total : %.2f reais\n" % precoChowChawgas)
+elif (precoVaiRex == precoChowChawgas):
+    imprimeValorChowChawgas(precoChowChawgas)
+
+elif (precoMeuCanino < precoVaiRex) and (precoMeuCanino < precoChowChawgas):
+    imprimeValorMeuCaninoFeliz(precoMeuCanino)
+
+elif(precoVaiRex < precoMeuCanino) and (precoVaiRex < precoChowChawgas):
+    imprimeValorVaiRex(precoVaiRex)
+
+else:
+    imprimeValorChowChawgas(precoChowChawgas)

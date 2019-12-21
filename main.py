@@ -69,7 +69,7 @@ print(precoMeuCanino)
 print(precoVaiRex)
 print(precoChowChawgas)
 
-
+# considerando as distancias ja pre estabelecidas
 if(precoMeuCanino == precoVaiRex == precoChowChawgas):
     imprimeValorChowChawgas(precoChowChawgas)
 

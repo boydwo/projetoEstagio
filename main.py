@@ -69,7 +69,13 @@ print(precoMeuCanino)
 print(precoVaiRex)
 print(precoChowChawgas)
 
-if (precoMeuCanino == precoVaiRex):
+
+if (precoMeuCanino < precoVaiRex) and (precoMeuCanino < precoChowChawgas):
+    imprimeValorMeuCaninoFeliz(precoMeuCanino)
+
+elif(precoVaiRex < precoMeuCanino) and (precoVaiRex < precoChowChawgas):
+    imprimeValorVaiRex(precoVaiRex)
+elif(precoMeuCanino == precoVaiRex):
     imprimeValorVaiRex(precoVaiRex)
 
 elif (precoMeuCanino == precoChowChawgas):
@@ -77,12 +83,5 @@ elif (precoMeuCanino == precoChowChawgas):
 
 elif (precoVaiRex == precoChowChawgas):
     imprimeValorChowChawgas(precoChowChawgas)
-
-elif (precoMeuCanino < precoVaiRex) and (precoMeuCanino < precoChowChawgas):
-    imprimeValorMeuCaninoFeliz(precoMeuCanino)
-
-elif(precoVaiRex < precoMeuCanino) and (precoVaiRex < precoChowChawgas):
-    imprimeValorVaiRex(precoVaiRex)
-
 else:
     imprimeValorChowChawgas(precoChowChawgas)

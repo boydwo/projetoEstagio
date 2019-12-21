@@ -39,9 +39,11 @@ def calculaValorChowChawgas(caesPequenos, caesGrandes):
 
 entrada = str(input())
 dados = entrada.split(" ")
+
 data = dados[0]
 quantCaesPeq = int(dados[1])
 quantCaesGrand = int(dados[2])
+
 data = verificaDiaData(data)
 precoMeuCanino = calculaValorMeuCaninoFeliz(data, quantCaesPeq, quantCaesGrand)
 precoVaiRex = calculaValorVaiRex(data, quantCaesPeq, quantCaesGrand)
@@ -51,13 +53,14 @@ print(precoMeuCanino)
 print(precoVaiRex)
 print(precoChowChawgas)
 
-if (precoMeuCanino < precoVaiRex) and (precoMeuCanino < precoChowChawgas):
+if (precoMeuCanino <= precoVaiRex) and (precoMeuCanino <= precoChowChawgas):
     print("Melhor Petshop: Meu  Canino Feliz")
-    print("Preço total : %.2f" % precoMeuCanino)
+    print("Preço total : %.2f reais\n" % precoMeuCanino)
 
-elif (precoVaiRex < precoMeuCanino) and (precoVaiRex < precoChowChawgas):
+if (precoVaiRex <= precoMeuCanino) and (precoVaiRex <= precoChowChawgas):
     print("Melhor Petshop: Vai Rex")
-    print("Preço total : %.2f" % precoVaiRex)
-else:
+    print("Preço total : %.2f reais\n" % precoVaiRex)
+
+if(precoChowChawgas <= precoMeuCanino) and (precoChowChawgas <= precoVaiRex):
     print("Melhor Petshop: ChowChawgas")
-    print("Preço total : %.2f reais" % precoChowChawgas)
+    print("Preço total : %.2f reais\n" % precoChowChawgas)

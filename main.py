@@ -8,8 +8,8 @@ def verificaDiaData(dataCompleta):
     ano = int(dataCompleta[2])
     dataCompleta = date(year=ano, month=mes, day=dia)
 
-    # verifica dia da semana  retornando um inteiro
-    # | 0 = segunda | 1= terça | 2= quarta | 3= quinta | 4= sexta | 5= sabado | 6= domingo
+    # "weekday" verifica dia da semana  retornando um inteiro
+    #  0 = segunda | 1= terça | 2= quarta | 3= quinta | 4= sexta | 5= sabado | 6= domingo
     diaSemana = int(dataCompleta.weekday())
     return diaSemana
 
@@ -65,9 +65,9 @@ precoMeuCanino = calculaValorMeuCaninoFeliz(data, quantCaesPeq, quantCaesGrand)
 precoVaiRex = calculaValorVaiRex(data, quantCaesPeq, quantCaesGrand)
 precoChowChawgas = calculaValorChowChawgas(quantCaesPeq, quantCaesGrand)
 
-print(precoMeuCanino)
-print(precoVaiRex)
-print(precoChowChawgas)
+# print(precoMeuCanino)
+# print(precoVaiRex)
+# print(precoChowChawgas)
 
 # considerando as distancias ja pre estabelecidas
 if(precoMeuCanino == precoVaiRex == precoChowChawgas):

@@ -1,16 +1,17 @@
 from datetime import date
 
 
+# função  que verifica dia da semana retornando um inteiro
+#  0 = segunda | 1= terça | 2= quarta | 3= quinta | 4= sexta | 5= sabado | 6= domingo
 def verificaDiaData(dataCompleta):
     dataCompleta = dataCompleta.split("/")
     dia = int(dataCompleta[0])
     mes = int(dataCompleta[1])
     ano = int(dataCompleta[2])
-    dataCompleta = date(year=ano, month=mes, day=dia)
 
-    # "weekday" verifica dia da semana  retornando um inteiro
-    #  0 = segunda | 1= terça | 2= quarta | 3= quinta | 4= sexta | 5= sabado | 6= domingo
+    dataCompleta = date(year=ano, month=mes, day=dia)
     diaSemana = int(dataCompleta.weekday())
+
     return diaSemana
 
 
@@ -60,10 +61,11 @@ data = dados[0]
 quantCaesPeq = int(dados[1])
 quantCaesGrand = int(dados[2])
 
-data = verificaDiaData(data)
+diaDaSemana = verificaDiaData(data)
 
-precoMeuCanino = calculaValorMeuCaninoFeliz(data, quantCaesPeq, quantCaesGrand)
-precoVaiRex = calculaValorVaiRex(data, quantCaesPeq, quantCaesGrand)
+precoMeuCanino = calculaValorMeuCaninoFeliz(
+    diaDaSemana, quantCaesPeq, quantCaesGrand)
+precoVaiRex = calculaValorVaiRex(diaDaSemana, quantCaesPeq, quantCaesGrand)
 precoChowChawgas = calculaValorChowChawgas(quantCaesPeq, quantCaesGrand)
 
 # print(precoMeuCanino)

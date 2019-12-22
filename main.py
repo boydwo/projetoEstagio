@@ -53,7 +53,7 @@ def imprimeValorChowChawgas(preco):
     print("Preço total : %.2f reais\n" % preco)
 
 
-print("\n Entre com os Dados: \n")
+print("Entre com os Dados: \n")
 entrada = str(input())
 dados = entrada.split(" ")
 
